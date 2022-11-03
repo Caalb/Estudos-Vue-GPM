@@ -1,0 +1,36 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+  <p>SEU NÚMERO: {{contador}}</p>
+  <p>Escolha um número para ser somado:</p>
+  <input type="number" v-model="value">
+  <button style="display:block; margin-top: 20px;" v-on:click="somar">Somar</button>
+  <p v-on:mousemove="atualizarXY">MOUSE: {{x}} {{y}}
+    <span v-on:mousemove.stop="">PARAR AQUI!!!</span>
+  </p>
+  <a v-on:click.prevent="" href="http://google.com">Google</a>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      contador: 0,
+      x: 0,
+      y: 0,
+      value: 0,
+    },
+    methods: {
+      somar(event) {
+        this.contador+= parseInt(this.value)
+      },
+      atualizarXY(e) {
+        this.y = e.screenY
+        this.x = e.screenX
+      },
+      // parar(e) {
+      //   e.stopPropagation()
+      // }
+    }
+  })
+</script>
