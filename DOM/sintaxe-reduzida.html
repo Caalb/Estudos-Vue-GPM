@@ -2,10 +2,9 @@
 
 <div id="app">
   <p>SEU NÚMERO: {{contador}}</p>
-  <p>Escolha um número para ser somado:</p>
-  <input type="number" v-model="value">
-  <button style="display:block; margin-top: 20px;" v-on:click="somar">Somar</button>
-  <p v-on:mousemove="atualizarXY">MOUSE: {{x}} {{y}}</p>
+  <button @click="somar">Somar 1</button>
+  <hr>
+  <input type="text" :value="contador">
 </div>
 
 <script>
@@ -13,17 +12,10 @@
     el: '#app',
     data: {
       contador: 0,
-      x: 0,
-      y: 0,
-      value: 0,
     },
     methods: {
       somar(event) {
-        this.contador+= parseInt(this.value)
-      },
-      atualizarXY(e) {
-        this.y = e.screenY
-        this.x = e.screenX
+        this.contador++;
       },
     }
   })
