@@ -1,0 +1,28 @@
+<meta charset="URF-8">
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app1">
+  {{titulo1}}
+  <button @click="titulo1 += !!!">Alterar</button>
+</div>
+
+<div id="app2">
+  {{titulo2}}
+  <button @click="titulo2 += !!!">Alterar</button>
+</div>
+
+<script>
+  new Vue({
+    el: '#app1',
+    data: {
+      titulo1: 'Teste 1'
+    }
+  })
+  new Vue({
+    el: '#app2',
+    data: {
+      titulo2: 'Teste 2'
+    }
+  })
+</script>
