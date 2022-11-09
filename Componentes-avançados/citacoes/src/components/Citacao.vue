@@ -9,7 +9,12 @@
 <script>
 
 export default {
-    props: ['texto']
+    // activated() {
+    //     console.log('activated')
+    // },
+    // deactivated() {
+    //     console.log('deactivated')
+    // }
 }
 </script>
 
