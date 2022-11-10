@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld v-for="post in posts" v-bind:key="post.id" v-bind:id="post.id" v-bind:title="post.title"></HelloWorld>
+    <HelloWorld v-for="post in posts" v-bind:key="post.id" v-bind:post="post"></HelloWorld>
   </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
         { id: 1, title: 'Minha jornada com Vue' },
         { id: 2, title: 'Postagens com Vue' },
         { id: 3, title: 'Porque Vue é tão divertido' },
-        { id: 4, title: "Teste"}
+        { id: 4, title: "Teste" }
       ]
     }
   }

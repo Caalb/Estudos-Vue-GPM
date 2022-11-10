@@ -1,16 +1,13 @@
 <template>
   <div>
-    <h3>{{title}}</h3>
-    <h6>ID: {{id}}</h6>
+    <h3>{{post.title}}</h3>
+    <h6>ID: {{post.id}}</h6>
   </div>
 </template>
 <script>
 
 export default {
-  props: {
-    id: Number,
-    title: String,
-  },
+  props: ['post'],
 }
 </script>
 
