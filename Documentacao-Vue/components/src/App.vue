@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <div :style="{ fontSize: postFontSize + 'em'}">
-      <HelloWorld v-for="post in posts" v-bind:key="post.id" v-bind:post="post" v-on:enlarge-text="onEnlargeText($event)" v-on:decrease-text="postFontSize -= $event"></HelloWorld>
-    </div>
+    <input type="color" v-model="color">
+      <HelloWorld @search-text="searchText" :color="color"></HelloWorld>
+      <p>{{text}}</p>
   </div>
 </template>
 
@@ -16,19 +16,14 @@ export default {
   },
   data() {
     return {
-      postFontSize: 1,
-      posts: [
-        { id: 1, title: 'Minha jornada com Vue' },
-        { id: 2, title: 'Postagens com Vue' },
-        { id: 3, title: 'Porque Vue é tão divertido', content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolore alias consequatur porro! Sint autem culpa dolorum corrupti. Sit harum maxime veritatis ipsa soluta iste est saepe fugiat placeat vero." },
-        { id: 4, title: "Teste", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolore alias consequatur porro! Sint autem culpa dolorum corrupti. Sit harum maxime veritatis ipsa soluta iste est saepe fugiat placeat vero."}
-      ],
-      onEnlargeText: function (enlargeAmount) {
-      this.postFontSize += enlargeAmount
-  }
+      text: '',
+      color: ''
     }
   },
   methods: {
+    searchText(data) {
+      this.text = data;
+    }
   }
 }
 

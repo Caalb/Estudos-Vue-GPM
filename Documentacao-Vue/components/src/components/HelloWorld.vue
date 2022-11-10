@@ -1,17 +1,22 @@
 <template>
   <div>
-    <h3>{{post.title}}</h3>
-    <button @click="$emit('enlarge-text', 0.1)">Aumentar Fonte</button>
-    <button @click="$emit('decrease-text', 0.1)">Diminuir Fonte</button>
-    <p>Conteudo: {{post.content}}</p>
+    <input type="text" v-model="searchText" >
+    <button @click="$emit('search-text', searchText)" style="margin: 1rem"  :style="`background: ${this.color};`">Enviar para o pai</button>
   </div>
 </template>
 <script>
 
 export default {
   props: {
-    post: Object,
+    color: {
+      type: String,
+    }
   },
+  data () {
+    return {
+      searchText: '',
+    }
+  }
 }
 </script>
 
