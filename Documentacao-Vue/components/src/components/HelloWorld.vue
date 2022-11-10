@@ -1,25 +1,16 @@
 <template>
-  <div class="button">
-    {{count}}
-    <button @click="aumentar">Aumentar 1</button>
+  <div>
+    <h3>{{title}}</h3>
+    <h6>ID: {{id}}</h6>
   </div>
 </template>
-
 <script>
+
 export default {
   props: {
-
+    id: Number,
+    title: String,
   },
-  data: function () {
-    return {
-      count: 0
-    }
-  },
-  methods: {
-    aumentar() {
-      this.count++;
-    }
-  }
 }
 </script>
 
