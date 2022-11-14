@@ -30,8 +30,11 @@ export default {
 		}
 	},
 	watch: {
-		tasks() {
-			localStorage.setItem('tasks',JSON.stringify(this.tasks))
+		tasks: {
+			deep: true,
+			handler() {
+				localStorage.setItem('tasks',JSON.stringify(this.tasks))
+			}
 		}
 	},
 	methods: {
