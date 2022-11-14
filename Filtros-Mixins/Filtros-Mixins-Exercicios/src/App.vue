@@ -42,6 +42,9 @@ export default {
 			cpf: '60070080090',
 		}
 	},
+	created() {
+    console.log('Created - App Mixin');
+  }
 }
 </script>
 
