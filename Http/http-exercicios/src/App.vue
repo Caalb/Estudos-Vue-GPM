@@ -45,6 +45,7 @@ export default {
 		obterUsuarios() {
 			this.$http.get('usuarios.json').then(res => {
 				this.usuarios = res.data
+				console.log(res.data)
 			})
 		}
 	}
