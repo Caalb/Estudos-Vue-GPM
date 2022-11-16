@@ -31,6 +31,6 @@ Vue.use({
 
       //  res.data = array
        return res
-    }, error => Promise.raject(error))
+    }, error => Promise.reject(error))
   }
 })
