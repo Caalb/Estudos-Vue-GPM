@@ -2,9 +2,9 @@
   <div class="usuario-lista">
     <h3>Lista de Usúarios</h3>
     <ul>
-      <li class="item-lista">Usúario 1</li>
-      <li class="item-lista">Usúario 2</li>
-      <li class="item-lista">Usúario 3</li>
+      <router-link tag="li" to="/usuario/?" class="item-lista">Usúario 1</router-link>
+      <router-link tag="li" to="/usuario/?" class="item-lista">Usúario 2</router-link>
+      <router-link tag="li" to="/usuario/?" class="item-lista">Usúario 3</router-link>
     </ul>
   </div>
 </template>
