@@ -6,6 +6,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     produtos: [],
+    quantidade: 0,
+    preco: 0,
   },
   getters: {
     valorTotal(state) {
@@ -16,14 +18,20 @@ export default new Vuex.Store({
   },
   mutations: {
     adicionarProduto(state, payload) {
-      state.produtos.push(payload)
+      state.produtos.push(payload);
+    },
+    setQuantidade(state, payload) {
+      state.quantidade = payload
+    },
+    setPreco(state, payload) {
+      state.preco = payload
     }
   },
   actions: {
-    adicionarProduto({commit}, payload) {
+    adicionarProduto({ commit }, payload) {
       setTimeout(() => {
-        commit('adicionarProduto', payload)
-      }, 1000)
-    }
-  }
+        commit("adicionarProduto", payload);
+      }, 1000);
+    },
+  },
 });
