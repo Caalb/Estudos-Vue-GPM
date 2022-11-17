@@ -9,14 +9,15 @@
 </template>
 
 <script>
+
 export default {
+  // computed: mapGatters({
+  //   total: 'valorTotal'
+  // })
   computed: {
     total() {
       return this.$store.getters.valorTotal
     },
-    produtos() {
-      return this.$store.state.produtos
-    }
   }
 }
 </script>
