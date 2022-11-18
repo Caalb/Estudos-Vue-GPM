@@ -31,9 +31,8 @@ export default {
         quantity: this.quantity
       }
 
+      this.$store.dispatch('buyStock', order)
       this.quantity = 0
-      // eslint-disable-next-line
-      console.log(order)
     }
   }
 }

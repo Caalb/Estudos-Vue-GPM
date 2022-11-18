@@ -1,25 +1,25 @@
-import stocks from "../../data/stocks"
+import stocks from "../../data/stocks";
 
 export default {
   state: {
-    stocks: []
+    stocks: [],
   },
   mutations: {
     setStocks(state, stocks) {
-      state.stocks = stocks
-    }
+      state.stocks = stocks;
+    },
   },
   actions: {
-    buyStock({commit}, order) {
-      commit()
+    buyStock({ commit }, order) {
+      commit("buyStock", order);
     },
-    initStocks({commit}) {
-      commit('setStocks', stocks)
-    }
+    initStocks({ commit }) {
+      commit("setStocks", stocks);
+    },
   },
   getters: {
     stocks(state) {
-      return state.stocks
-    }
-  }
-}
+      return state.stocks;
+    },
+  },
+};
